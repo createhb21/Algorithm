@@ -77,7 +77,13 @@ for (let item of m) {
 console.log("-------");
 let str = "abc abc de de abcde defg ABC";
 let str2 = "abc abc de de abcde \n defg";
+// 이스케이프 시퀀스
+// 예약 혹은 특수 문자를 출력하기 위하여 이스케이프 시퀀스를 사용할 수 있다.
 // \n \t \v \' \"" \\
+// \t => 탭
+// \\ => 역 슬래시
+// \" => 큰 따옴표
+// \' => 작은 따옴표
 console.log(str);
 console.log(str2);
 
@@ -97,3 +103,69 @@ let re = /abc/i;
 let re2 = /abc/gi;
 console.log(str.match(re));
 console.log(str.match(re2));
+
+console.log("----------------------------");
+
+// 실수를 출력할 때 소수점 아래 특정 자리에서 반올림할 수 있다.
+// 특정 실수에 대하여 toFixed()를 이용해 소수점 아래 둘째 자리까지 출력
+let x = 123.456;
+console.log(x.toFixed(2));
+
+console.log("----------------------------");
+
+let input = `472 
+385`;
+
+let input2 = input.toString().split("\n");
+
+let a = input2[0];
+let b = input2[1];
+
+let x_1 = b[2];
+let x_2 = b[1];
+let x_3 = b[0];
+
+console.log(Number(a) * Number(x_1));
+console.log(Number(a) * Number(x_2));
+console.log(Number(a) * Number(x_3));
+console.log(Number(a) * Number(b));
+
+console.log("----------------------------");
+
+let n = 5;
+
+let result = "";
+for (let i = 0; i < n; i++) {
+  for (let j = 0; j <= i; j++) {
+    result += "*";
+  }
+  result += "\n";
+}
+console.log(result);
+
+console.log("----------------------------");
+// 빠른 A + B
+// 빠르게 출력하기 위해 하나의 문자열 변수에 정보를 담은 뒤에 한꺼번에 문자열을 출력한다.
+// 한 줄(line)을 출력할 때마다 console.log()를 수행하면 많은 시간이 소요된다.
+// 따라서 모든 줄에 대한 정보를 하나의 문자열에 담았다가 한꺼번에 출력한다.
+
+let inputText = `5
+1 1
+12 34
+5 500
+40 60
+1000 1000`;
+
+let data = inputText.toString().split("\n");
+
+let testCase = Number(data[0]);
+let answer = "";
+
+for (let t = 1; t <= testCase; t++) {
+  let numberArr = data[t].split(" ");
+  let a = Number(numberArr[0]);
+  let b = Number(numberArr[1]);
+  answer += a + b + "\n";
+}
+
+console.log(answer);
