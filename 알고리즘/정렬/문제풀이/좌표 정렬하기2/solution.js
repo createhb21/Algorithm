@@ -21,7 +21,6 @@ for (let i = 1; i <= n; i++) {
   let [x, y] = input[i].split(" ").map(Number);
   data.push([x, y]);
 }
-console.log(data);
 
 function compare(a, b) {
   if (a[1] != b[1]) return a[1] - b[1]; // x 좌표 기준 오름차순
@@ -30,7 +29,6 @@ function compare(a, b) {
 
 data.sort(compare); // 정렬 수행
 
-console.log(data);
 let answer = ""; // 정렬 결과 출력
 for (let point of data) {
   answer += point[0] + " " + point[1] + "\n";
