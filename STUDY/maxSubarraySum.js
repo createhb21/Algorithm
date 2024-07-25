@@ -1,3 +1,5 @@
+// Sliding Window
+
 /**
  * 규모가 큰 데이터셋에서 데이터의 하위 집합을 추적하는 문제에 유용하다.
  */
@@ -34,4 +36,9 @@ function maxSubarraySum(arr, num) {
   return maxSum;
 }
 
-maxSubarraySum([2, 6, 9, 2, 1, 8, 5, 6, 3], 3);
+console.log(maxSubarraySum([2, 6, 9, 2, 1, 8, 5, 6, 3], 3)); // 19
+console.log(maxSubarraySum([100, 200, 300, 400], 2)); // 700
+console.log(maxSubarraySum([1, 4, 2, 10, 23, 3, 1, 0, 20], 4)); // 39
+console.log(maxSubarraySum([-3, 4, 0, -2, 6, -1], 2)); // 5
+console.log(maxSubarraySum([3, -2, 7, -4, 1, -1, 4, -2, 1], 2)); // 5
+console.log(maxSubarraySum([2, 3], 3)); // null
