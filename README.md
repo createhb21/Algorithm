@@ -1,1 +1,2 @@
-# Algorithm Repository (Using JavaScript)
+# Algorithm Repository 
+Using JavaScript
