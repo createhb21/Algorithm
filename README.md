@@ -1,1 +1,1 @@
-# my-KkeujuckKkeujuck-Algorithm
+# Algorithm Repository (Using JavaScript)
